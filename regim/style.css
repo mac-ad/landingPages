@@ -108,6 +108,9 @@ button.primary-btn{
 
 /* header part */
 
+header{
+    overflow:hidden;
+}
 
 header > .bg{
     width : 100%;
