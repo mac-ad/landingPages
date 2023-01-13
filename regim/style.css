@@ -31,6 +31,9 @@ body{
     --fs-s : 0.8rem;
     --fs-xs : .75rem;
     --bg-circle : 300px;
+    --bg-circle-header : 700px;
+    --bg-circle-header : 400px;
+
 
     --wrapper-width : 90%;
     --wrapper-max-width : 650px;
@@ -103,9 +106,6 @@ button.primary-btn{
 
 /* header part */
 
-header{
-    /* border:1px solid red; */
-}
 
 header > .bg{
     width : 100%;
@@ -141,6 +141,22 @@ nav{
     flex-direction: column;
     gap:5em;
     padding:3em 0;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    height:var(--bg-circle-header);
+    width:var(--bg-circle-header);
+    background:var(--light-blue);
+    border-radius:50%;
+    /* transform:translate(50%,-40%); */
+    z-index:-1;
+
+    bottom: 8%;
+    right: 0;
+    transform: translateX(10%);
 }
 
 .hero >*{
@@ -386,7 +402,14 @@ footer .logo::before{
 
 @media only screen and (min-width : 600px){
     body{
-        
+        --bg-circle-header : 700px;
+    }
+
+    .hero::before{
+        bottom: unset;
+        right: 0;
+        transform: translateX(10%);
+        top: 30%;
     }
 
     
@@ -438,6 +461,12 @@ footer .logo::before{
     .hero{
         padding:3em 0;
         align-items: center;
+    }
+
+    .hero::before{
+        top:0;
+        right:0;
+        transform:translate(40%,-40%);
     }
     
     section{
