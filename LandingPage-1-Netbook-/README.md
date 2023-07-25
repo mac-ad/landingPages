@@ -1,3 +1,5 @@
-# LandingPage-1-Netbook-
+### landing page notebook:
 
-https://kali-landingpage.vercel.app/
+This is a simple clone of kali linux main website using html, css and js.
+
+- link to [website](https://notebook-landingpage.vercel.app/)
